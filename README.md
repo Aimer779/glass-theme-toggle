@@ -7,6 +7,12 @@
 
 ## 打开
 
+在线预览：https://aimer779.github.io/glass-theme-toggle/
+
+在线对比：https://aimer779.github.io/glass-theme-toggle/comparison.html
+
+公开仓库：https://github.com/Aimer779/glass-theme-toggle
+
 本地预览：http://127.0.0.1:18240
 
 滑块对比：http://127.0.0.1:18240/comparison.html
@@ -94,3 +100,10 @@ node tests/verify.cjs
 - `evidence/`：本地参考帧、页面截图与检查结果。
 
 此实验使用独立的本地 Git 仓库。
+
+## GitHub Pages
+
+Pages 从 `master` 分支根目录发布。
+`.nojekyll` 让页面按静态文件部署。
+推送到 `master` 后，GitHub 自动更新站点。
+发布前运行 `node tests/verify.cjs`。
