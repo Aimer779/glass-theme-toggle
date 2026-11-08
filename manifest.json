@@ -1,47 +1,29 @@
 {
-  "version": 2,
+  "version": 3,
   "runtimeExternalRequests": [],
   "files": [
     {
-      "path": "index.html",
-      "bytes": 4554,
-      "sha256": "81a2b8025b8b821bbc0356b3cfbc625daa839d638e676fd97ae03f3e1237e6fa",
-      "source": "Independent local implementation; no external dependencies"
-    },
-    {
-      "path": "styles.css",
-      "bytes": 7434,
-      "sha256": "13d049936065fec1fe937773b2bd924914a5f7eaea9ab8523440575f64901e08",
-      "source": "Independent local implementation; no external dependencies"
-    },
-    {
-      "path": "script.js",
-      "bytes": 7979,
-      "sha256": "b1988beadd5c92692d80826e039712e28b8bbeb676170f51538d87910ac7a735",
+      "path": "curve-panel.js",
+      "bytes": 3698,
+      "sha256": "e8d26db54f0750bd5f8b90658c9e94978b401f4454bf13e8956e48837b15b72a",
       "source": "Independent local implementation; no external dependencies"
     },
     {
       "path": "dynamics.js",
-      "bytes": 2475,
-      "sha256": "9d1152291db759be11e623e649e18b253997e9462216b026f98ecfee3e1283a3",
+      "bytes": 2237,
+      "sha256": "bf68ba1055670489618967869fc6e14d71e01f93001347a2e66f5c1c9adc067c",
       "source": "Independent local implementation; no external dependencies"
     },
     {
-      "path": "settings.js",
-      "bytes": 5321,
-      "sha256": "45d761a98151f72c68fd6d020aaa1f04c49a81423368bd8eb88035795fa9d04b",
-      "source": "Independent local implementation; no external dependencies"
+      "path": "evidence/reference-curve.png",
+      "bytes": 31853,
+      "sha256": "94c2f1558612090bbd4196331ad1ffd336f8ab72bf4bb412408c2925e6d4d6f5",
+      "source": "User-provided local reference; not used as runtime artwork"
     },
     {
-      "path": "curve-panel.js",
-      "bytes": 2358,
-      "sha256": "e84aa6a430b3b9947c8fa98fbc3557bba14d999758f85dc1d938f687a094b2bb",
-      "source": "Independent local implementation; no external dependencies"
-    },
-    {
-      "path": "evidence/reference-motion.jpg",
-      "bytes": 81575,
-      "sha256": "2f3a0de5b926ea193acacbdfc94408d1bba359af29ee709425cb6994e205baaf",
+      "path": "evidence/reference-day-close.png",
+      "bytes": 161997,
+      "sha256": "7ea3c6f95193f4fda89cfa196cc3615c3f639c4c3399bd11ddb54ef5336321b0",
       "source": "User-provided local reference; not used as runtime artwork"
     },
     {
@@ -51,9 +33,33 @@
       "source": "User-provided local reference; not used as runtime artwork"
     },
     {
-      "path": "evidence/reference-curve.png",
-      "bytes": 31853,
-      "sha256": "94c2f1558612090bbd4196331ad1ffd336f8ab72bf4bb412408c2925e6d4d6f5",
+      "path": "evidence/reference-mid-drag-sequence.jpg",
+      "bytes": 115935,
+      "sha256": "f327d3bd2a014c27e0d645d0ea79f5e6fa13d952b3379015d1ceb802e3daf76d",
+      "source": "User-provided local reference; not used as runtime artwork"
+    },
+    {
+      "path": "evidence/reference-mid-moving.png",
+      "bytes": 146877,
+      "sha256": "236e622770625b714b803be18819c51813847499eb9f81a0d04710781452254a",
+      "source": "User-provided local reference; not used as runtime artwork"
+    },
+    {
+      "path": "evidence/reference-mid-night.png",
+      "bytes": 196885,
+      "sha256": "ce582b75e15f7bb704f6db671890cd075e89f8e9a65fd67ea6b5a30dc7094ec2",
+      "source": "User-provided local reference; not used as runtime artwork"
+    },
+    {
+      "path": "evidence/reference-midpoint.png",
+      "bytes": 168423,
+      "sha256": "4cb03683dbb4c535e1b850276fd9804b043d9c1eaa811b2dcd6dafc92f8532ca",
+      "source": "User-provided local reference; not used as runtime artwork"
+    },
+    {
+      "path": "evidence/reference-motion.jpg",
+      "bytes": 81575,
+      "sha256": "2f3a0de5b926ea193acacbdfc94408d1bba359af29ee709425cb6994e205baaf",
       "source": "User-provided local reference; not used as runtime artwork"
     },
     {
@@ -63,10 +69,58 @@
       "source": "User-provided local reference; not used as runtime artwork"
     },
     {
-      "path": "evidence/reference-day-close.png",
-      "bytes": 161997,
-      "sha256": "7ea3c6f95193f4fda89cfa196cc3615c3f639c4c3399bd11ddb54ef5336321b0",
+      "path": "evidence/reference-night-geometry.png",
+      "bytes": 218278,
+      "sha256": "d9d5201930745e22109bf3a26cc91c3ea39cf3ced1215425050fcf8a9acf25fa",
       "source": "User-provided local reference; not used as runtime artwork"
+    },
+    {
+      "path": "evidence/reference-squash-sequence.jpg",
+      "bytes": 102467,
+      "sha256": "0a7cfe35d8811dbf98dec6019813f6e1a4a8c73e0d3159a5ca59cca10dd54c6e",
+      "source": "User-provided local reference; not used as runtime artwork"
+    },
+    {
+      "path": "gesture.js",
+      "bytes": 2164,
+      "sha256": "8128a04ab57e20fcbeba5ec00088db9ee12a073d3ac77a0e8f50c34c96204bca",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4844,
+      "sha256": "cf7f49d3a11e10e48774915e3332ef6eaa07f7c78b08f60b3c64070fafbd5b67",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 4854,
+      "sha256": "53a011b0e0ae28566d8f0e86d72dcd3adf22e9161eff3ef5e7b6ac2c9592c827",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "particles.js",
+      "bytes": 1845,
+      "sha256": "1f17107f2b19eb8ef89ea53e417b900db53cb2129ace17dcfa317af9e5990d7c",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "script.js",
+      "bytes": 7350,
+      "sha256": "5949e33385bf13322f09df024ef742456cdfe147408e160f637c71ef9ec914e0",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "settings.js",
+      "bytes": 5674,
+      "sha256": "ce98726fe04dc0fc1214b7c1c064efb3535feed1021774598cd250a1e942f3c7",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 7807,
+      "sha256": "f1f6372095725c7e2133cd12f6a639da21bfd415451f2b3d8d518137b31e48f8",
+      "source": "Independent local implementation; no external dependencies"
     }
   ]
 }

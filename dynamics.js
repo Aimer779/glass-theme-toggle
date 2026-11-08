@@ -2,11 +2,6 @@
 (function (root) {
   const clamp = (v, low, high) => Math.min(high, Math.max(low, v));
   const mix = (a, b, t) => a + (b - a) * t;
-  const ease = (t, power = 4) => 1 - Math.pow(1 - clamp(t, 0, 1), power);
-  function curves(t, power = 4) {
-    t = clamp(t, 0, 1);
-    return { travel: ease(t, power), morph: t * t * (3 - 2 * t), rim: ease(t, power) };
-  }
   // Start at the top midpoint. Top=0%, bottom=50%, independent of radius.
   function rimPath(radius, gap = 0) {
     const low = -gap, high = 180 + gap, r = radius + gap;
@@ -44,7 +39,7 @@
     }
     return output;
   }
-  const api = { clamp, mix, ease, curves, rimPath, rimOffset, glyph, random, sanitize };
+  const api = { clamp, mix, rimPath, rimOffset, glyph, random, sanitize };
   if (typeof module !== 'undefined') module.exports = api;
   else root.ToggleMath = api;
 })(globalThis);

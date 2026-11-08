@@ -1,6 +1,6 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-const { glyph, sanitize, mix, ease, curves, rimOffset, rimPath } = require('../dynamics.js');
+const { glyph, sanitize, rimOffset, rimPath } = require('../dynamics.js');
 
 test('sun and moon targets remain inside the glass at maximum pixel size', () => {
   for (const day of [false, true]) {
@@ -12,12 +12,6 @@ test('sun and moon targets remain inside the glass at maximum pixel size', () =>
     }
   }
   assert.notDeepEqual(glyph(false), glyph(true));
-});
-
-test('interrupted interpolation starts at its captured position and ends at the new target', () => {
-  const interrupted = mix(0, 1, ease(.35));
-  assert.equal(mix(interrupted, 0, ease(0)), interrupted);
-  assert.equal(mix(interrupted, 0, ease(1)), 0);
 });
 
 test('stored parameters reject malformed colors, unknown keys and nonfinite values', () => {
@@ -38,20 +32,6 @@ test('highlight segment keeps its midpoint at the top or bottom for every length
   }
   for (const radius of [20, 43, 65]) {
     for (const gap of [0, 2, 10]) assert.ok(rimPath(radius, gap).startsWith(`M90 ${-gap}`));
-  }
-});
-
-test('all displayed curves have exact endpoints and monotonic progress', () => {
-  for (const power of [1, 2.5, 4, 7]) {
-    assert.deepEqual(curves(0, power), { travel: 0, morph: 0, rim: 0 });
-    assert.deepEqual(curves(1, power), { travel: 1, morph: 1, rim: 1 });
-    let previous = curves(0, power);
-    for (let i = 1; i <= 100; i++) {
-      const current = curves(i/100, power);
-      for (const key of ['travel','morph','rim']) assert.ok(current[key] >= previous[key] && current[key] <= 1);
-      previous = current;
-    }
-    assert.equal(curves(.5,power).morph, .5);
   }
 });
 

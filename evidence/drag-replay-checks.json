@@ -1,0 +1,55 @@
+[
+  {
+    "frozen": {
+      "before": {
+        "state": "paused",
+        "animating": "false",
+        "paused": "true",
+        "progress": "1.00000",
+        "x": "1.082990",
+        "sx": "1.034764",
+        "sy": "0.960401",
+        "phase": "14.917524",
+        "pointerFocus": "true"
+      },
+      "unchanged": true,
+      "curve": "108.3%"
+    }
+  },
+  {
+    "channel": "sx",
+    "value": "1.035×"
+  },
+  {
+    "channel": "sy",
+    "value": "0.960×"
+  },
+  {
+    "channel": "phase",
+    "value": "53.7°"
+  },
+  {
+    "channel": "morph",
+    "value": "100.0%"
+  },
+  {
+    "channel": "x",
+    "value": "108.3%"
+  },
+  "recorded gesture scrub, resume and replay passed",
+  "rapid click interruption passed",
+  "new parameters persist and export without obsolete easing/duration",
+  {
+    "reduce": {
+      "state": "dragging",
+      "animating": "true",
+      "paused": "false",
+      "progress": "0.50000",
+      "x": "0.500000",
+      "sx": "1.000000",
+      "sy": "1.000000",
+      "phase": "-25.000000",
+      "pointerFocus": "true"
+    }
+  }
+]

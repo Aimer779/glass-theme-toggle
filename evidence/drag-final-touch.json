@@ -1,0 +1,44 @@
+[
+  {
+    "middle": {
+      "state": "dragging",
+      "animating": "true",
+      "paused": "false",
+      "progress": "0.54000",
+      "x": "0.540000",
+      "sx": "0.980453",
+      "sy": "0.949725",
+      "phase": "23.446719",
+      "travel": "202.85999999999999",
+      "pointerFocus": "true"
+    }
+  },
+  {
+    "left": {
+      "state": "dragging",
+      "animating": "true",
+      "paused": "false",
+      "progress": "0.00000",
+      "x": "-0.148900",
+      "sx": "0.966415",
+      "sy": "0.956112",
+      "phase": "39.941466",
+      "travel": "202.85999999999999",
+      "pointerFocus": "true"
+    }
+  },
+  {
+    "right": {
+      "state": "dragging",
+      "animating": "true",
+      "paused": "false",
+      "progress": "1.00000",
+      "x": "1.152718",
+      "sx": "0.991967",
+      "sy": "0.938753",
+      "phase": "20.079835",
+      "travel": "202.85999999999999",
+      "pointerFocus": "true"
+    }
+  }
+]

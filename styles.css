@@ -21,18 +21,20 @@ button:focus-visible, input:focus-visible { outline: 2px solid #928cff; outline-
 .text-button { background: transparent; padding: 8px 0 8px 12px; font-size: 12px; }
 .text-button:hover { text-decoration: underline; text-underline-offset: 4px; }
 .ambient { inset: 0; background: radial-gradient(ellipse at 46% 48%, rgba(var(--accent), .045), transparent 55%); }
-.switch-frame { width: min(var(--width, 420px), calc(100% - 70px)); aspect-ratio: 2 / 1; }
-.theme-switch { display: block; width: 100%; height: 100%; background: transparent; border-radius: var(--track-radius); -webkit-tap-highlight-color: transparent; }
+.switch-frame { width: min(var(--width, 420px), calc(100% - 70px)); aspect-ratio: 1.94; }
+.theme-switch { display: block; width: 100%; height: 100%; background: transparent; border-radius: var(--track-radius); -webkit-tap-highlight-color: transparent; touch-action: none; user-select: none; cursor: grab; }
+.theme-switch[data-state=pressed], .theme-switch[data-state=dragging] { cursor: grabbing; }
 .theme-switch:focus-visible { outline-offset: 8px; }
-.track { inset: 0; border-radius: var(--track-radius, 52px); background: linear-gradient(150deg, rgba(0,0,0,calc(.5 - var(--day)*.43)), rgba(0,0,0,0)), rgb(calc(9 + var(--day)*211), calc(10 + var(--day)*209), calc(12 + var(--day)*201)); box-shadow: inset 0 4px 7px rgba(0,0,0,calc(.8 - var(--day)*.54)), inset 0 -1px 2px rgba(255,255,255,calc(.06 + var(--day)*.15)), 0 12px 22px rgba(0,0,0,calc(.35 - var(--day)*.16)), 0 1px 2px rgba(0,0,0,.18); }
-.thumb { top: 6%; left: 3%; width: 44%; height: 88%; border-radius: var(--radius); will-change: transform; }
-.glass { inset: 0; border-radius: inherit; background: linear-gradient(145deg, rgba(255,255,255,calc(var(--glass) + .08)), rgba(255,255,255,.025) 44%, rgba(255,255,255,calc(var(--day)*.12))), rgba(210,212,223,calc(var(--glass)*.35 + var(--day)*.32)); backdrop-filter: blur(var(--blur)); box-shadow: inset 0 1.5px 1.5px rgba(255,255,255,calc(.42 + var(--day)*.3)), inset 1px 0 2px rgba(255,255,255,.2), inset -1px -1px 1.5px rgba(255,255,255,.18), 0 6px 12px rgba(0,0,0,calc(.33 - var(--day)*.13)); }
+.theme-switch[data-pointer-focus]:focus-visible { outline: none; }
+.track { inset: 0; border-radius: var(--track-radius, 52px); background: linear-gradient(150deg, rgba(0,0,0,var(--track-shade,.5)), rgba(0,0,0,0)), rgb(calc(9 + var(--surface,0)*211), calc(10 + var(--surface,0)*209), calc(12 + var(--surface,0)*201)); box-shadow: inset 0 4px 7px rgba(0,0,0,calc(.8 - var(--day)*.54)), inset 0 -1px 2px rgba(255,255,255,calc(.06 + var(--day)*.15)), 0 12px 22px rgba(0,0,0,calc(.35 - var(--day)*.16)), 0 1px 2px rgba(0,0,0,.18); }
+.thumb { top: 5.85%; left: 3.1%; width: 45.5%; height: 88.3%; border-radius: var(--radius); transform-origin: center; will-change: transform; }
+.glass { inset: 0; border-radius: inherit; background: linear-gradient(145deg, rgba(255,255,255,calc(var(--glass) + .08)), rgba(255,255,255,.025) 44%, rgba(255,255,255,calc(var(--surface,0)*.12))), rgba(220,219,215,calc(var(--glass)*.35 + var(--surface,0)*.32)); backdrop-filter: blur(var(--blur)); box-shadow: inset 0 1.5px 1.5px rgba(255,255,255,calc(.42 + var(--day)*.3)), inset 1px 0 2px rgba(255,255,255,.2), inset -1px -1px 1.5px rgba(255,255,255,.18), 0 6px 12px rgba(0,0,0,calc(.33 - var(--day)*.13)); }
 .inner-light { inset: 0; border-radius: inherit; background: radial-gradient(ellipse at var(--light-x, 50%) var(--light-y, 100%), rgba(var(--accent),calc(var(--inner-glow, .85)*var(--glow))), transparent 76%); opacity: calc(1 - var(--day)*.12); }
 .particles { inset: 0; width: 100%; height: 100%; clip-path: inset(0 round var(--radius)); }
-.rim { inset: 0; width: 100%; height: 100%; opacity: min(1, var(--glow)); filter: brightness(calc(.8 + var(--glow)*.2)); }
+.rim { inset: 0; width: 100%; height: 100%; opacity: min(1, var(--glow)); filter: brightness(calc(.8 + var(--glow)*.2 + var(--transition-glow,0)*.07)); }
 .rim-path { stroke-dasharray: 34 66; stroke-dashoffset: var(--rim-phase); stroke-linecap: round; }
-.rim-halo { stroke: rgb(var(--accent)); stroke-width: 17; }
-.rim-soft { stroke: rgb(var(--accent)); stroke-width: 7; }
+.rim-halo { stroke: rgb(var(--accent)); stroke-width: calc(17 + var(--transition-glow,0)*3); }
+.rim-soft { stroke: rgb(var(--accent)); stroke-width: calc(7 + var(--transition-glow,0)*2); }
 .rim-core, .rim-echo { stroke: rgb(calc(241 + var(--day)*14),calc(240 + var(--day)*10),calc(255 - var(--day)*83)); stroke-width: var(--line-width, 1.8); }
 .rim-echo { stroke-width: calc(var(--line-width, 1.8)*.7); opacity: .9; }
 .panel { padding: 30px 25px 20px; background: #1c1d21; border-left: 1px solid #303137; color: #d5d5dc; height: 100svh; scrollbar-width: thin; scrollbar-color: #474850 transparent; }

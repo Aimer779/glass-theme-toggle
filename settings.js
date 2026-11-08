@@ -4,8 +4,11 @@
     { group: '形状与材质', key: 'radius', label: '滑块圆角', min: 20, max: 65, step: 1, unit: '', value: 43 },
     { group: '形状与材质', key: 'glass', label: '玻璃不透明度', min: .03, max: .4, step: .01, unit: '', value: .15 },
     { group: '形状与材质', key: 'blur', label: '玻璃模糊', min: 0, max: 30, step: 1, unit: ' px', value: 12 },
-    { group: '运动与粒子', key: 'duration', label: '切换时长', min: 250, max: 1600, step: 10, unit: ' ms', value: 680 },
-    { group: '运动与粒子', key: 'easing', label: '缓出强度 · 位移与高光', min: 1, max: 7, step: .1, unit: '', value: 4 },
+    { group: '弹性响应', key: 'stiffness', label: '弹簧刚度', min: 80, max: 500, step: 10, unit: '', value: 220 },
+    { group: '弹性响应', key: 'damping', label: '回弹阻尼', min: 8, max: 45, step: 1, unit: '', value: 20 },
+    { group: '弹性响应', key: 'elasticity', label: '边界弹性', min: .05, max: .6, step: .05, unit: '', value: .25 },
+    { group: '弹性响应', key: 'deformation', label: '挤压与拉伸', min: 0, max: 2, step: .1, unit: '', value: 1 },
+    { group: '弹性响应', key: 'rimLag', label: '高光跟随时间', min: 100, max: 500, step: 10, unit: ' ms', value: 230 },
     { group: '运动与粒子', key: 'spread', label: '粒子散开幅度', min: 0, max: 80, step: 1, unit: '', value: 27 },
     { group: '运动与粒子', key: 'size', label: '像素大小', min: 1, max: 3.3, step: .1, unit: '', value: 2.6 },
     { group: '运动与粒子', key: 'twinkle', label: '粒子闪烁', min: 0, max: 1, step: .05, unit: '', value: .25 },
@@ -56,7 +59,7 @@
       changed();
     });
   }
-  for (const key of ['easing', 'duration']) document.querySelector('#curve-tuning').append(document.getElementById(key).parentElement);
+  for (const key of ['stiffness', 'damping']) document.querySelector('#curve-tuning').append(document.getElementById(key).parentElement);
   form.addEventListener('submit', e => e.preventDefault());
   document.querySelector('#reset').addEventListener('click', () => {
     values = { ...defaults };
@@ -68,7 +71,7 @@
     changed(); feedback.textContent = '已恢复默认参数';
   });
   document.querySelector('#export').addEventListener('click', () => {
-    const blob = new Blob([JSON.stringify({ version: 2, parameters: values }, null, 2)], { type: 'application/json' });
+    const blob = new Blob([JSON.stringify({ version: 3, parameters: values }, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob), a = document.createElement('a');
     a.href = url; a.download = 'glass-toggle-parameters.json'; a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000); feedback.textContent = '已导出当前参数';

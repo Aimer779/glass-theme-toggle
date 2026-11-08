@@ -1,0 +1,80 @@
+[
+  {
+    "touchHold": {
+      "state": "dragging",
+      "animating": "true",
+      "paused": "false",
+      "progress": "0.49617",
+      "x": "0.496171",
+      "sx": "1.002431",
+      "sy": "0.939920",
+      "phase": "31.092489",
+      "travel": "154.56",
+      "pointerFocus": "true",
+      "scroll": 0
+    },
+    "cancel": "returned to night without click"
+  },
+  "touch flick and synthesized-click suppression passed",
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "width": 390,
+    "client": 375,
+    "scroll": 375,
+    "inputs": 20,
+    "dpr": 2,
+    "errors": []
+  },
+  {
+    "viewport": [
+      760,
+      900
+    ],
+    "width": 760,
+    "client": 745,
+    "scroll": 745,
+    "inputs": 20,
+    "dpr": 1,
+    "errors": []
+  },
+  {
+    "viewport": [
+      761,
+      900
+    ],
+    "width": 761,
+    "client": 761,
+    "scroll": 761,
+    "inputs": 20,
+    "dpr": 1,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1024,
+      768
+    ],
+    "width": 1024,
+    "client": 1024,
+    "scroll": 1024,
+    "inputs": 20,
+    "dpr": 1,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1440,
+      480
+    ],
+    "width": 1440,
+    "client": 1440,
+    "scroll": 1440,
+    "inputs": 20,
+    "dpr": 1,
+    "errors": []
+  },
+  "keyboard and panel controls passed"
+]

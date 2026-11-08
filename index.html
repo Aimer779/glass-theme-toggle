@@ -7,6 +7,9 @@
   <title>玻璃 · 昼夜开关</title>
   <link rel="stylesheet" href="styles.css">
   <script src="dynamics.js" defer></script>
+  <script src="motion.js" defer></script>
+  <script src="gesture.js" defer></script>
+  <script src="particles.js" defer></script>
   <script src="settings.js" defer></script>
   <script src="curve-panel.js" defer></script>
   <script src="script.js" defer></script>
@@ -33,17 +36,17 @@
           </span>
         </button>
       </div>
-      <footer class="stage-footer absolute"><span id="theme-label">夜间</span><span>点击切换 · 支持空格键</span></footer>
+      <footer class="stage-footer absolute"><span id="theme-label">夜间</span><span>拖动或点击 · 空格切换</span></footer>
     </section>
     <aside class="panel overflow-y-auto" id="panel" aria-label="效果参数">
       <header class="panel-header"><h1>效果参数</h1><p>实时调整，自动保存在此浏览器。</p></header>
       <section class="curve-panel" aria-label="动画曲线">
-        <div class="curve-heading"><h2>动画曲线</h2><select id="curve-channel" aria-label="曲线类型"><option value="travel">滑块位移</option><option value="morph">粒子聚合</option><option value="rim">高光进度</option></select></div>
+        <div class="curve-heading"><h2>实际响应曲线</h2><select id="curve-channel" aria-label="曲线类型"><option value="x">滑块位移</option><option value="sx">横向形变</option><option value="sy">纵向形变</option><option value="phase">高光相位</option><option value="morph">图案过渡</option></select></div>
         <svg id="curve-chart" viewBox="0 0 260 182" role="img" aria-labelledby="curve-title curve-description">
-          <title id="curve-title">动画进度曲线</title><desc id="curve-description">横轴为时间，纵轴为完成进度。下方时间游标可定格动画。</desc>
+          <title id="curve-title">实际响应曲线</title><desc id="curve-description">横轴为记录时间，纵轴为实际值，包含超调。时间游标可以定格和重播最近一次交互。</desc>
           <path class="chart-grid" d="M32 20H244 M32 84H244 M138 20V148"/>
           <path class="chart-axis" d="M32 16V148H248"/>
-          <text x="9" y="24">1</text><text x="10" y="152">0</text><text x="215" y="175">时间</text>
+          <text id="chart-ymax" x="1" y="24">1.1</text><text id="chart-ymin" x="1" y="152">−0.1</text><text x="215" y="175">时间</text>
           <path id="curve-line" class="chart-line"/>
           <path id="curve-guide" class="chart-guide"/>
           <circle id="curve-dot" class="chart-dot" r="4.5"/>
@@ -53,7 +56,7 @@
         <label class="parameter"><span>时间游标</span><output id="timeline-output" for="timeline">100%</output><input id="timeline" type="range" min="0" max="1000" step="1" value="1000"></label>
         <div class="curve-readout"><span id="curve-direction">日间 → 夜间</span><span id="curve-value">完成 100%</span></div>
         <div class="curve-actions"><button class="action-button" id="replay" type="button">重播</button><button class="action-button" id="resume" type="button" disabled>继续播放</button></div>
-        <p id="curve-status" class="curve-status" role="status">拖动游标可定格；点击开关可反向。</p>
+        <p id="curve-status" class="curve-status" role="status">拖动开关以记录响应，再用游标定格。</p>
       </section>
       <form id="parameters"></form>
       <div class="panel-actions"><button class="action-button" id="reset" type="button">恢复默认</button><button class="action-button" id="export" type="button">导出参数</button></div>

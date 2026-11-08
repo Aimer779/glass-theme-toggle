@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "parameters": {
+    "width": 420,
+    "radius": 43,
+    "glass": 0.15,
+    "blur": 12,
+    "stiffness": 220,
+    "damping": 20,
+    "elasticity": 0.25,
+    "deformation": 1,
+    "rimLag": 230,
+    "spread": 27,
+    "size": 2.6,
+    "twinkle": 0.25,
+    "glow": 1,
+    "arc": 34,
+    "lineWidth": 1.8,
+    "gap": 4.5,
+    "bloom": 7,
+    "innerGlow": 0.85,
+    "nightColor": "#8e87ff",
+    "dayColor": "#ffc34d"
+  }
+}

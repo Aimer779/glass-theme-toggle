@@ -3,7 +3,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
-for (const file of ['script.js', 'dynamics.js', 'settings.js', 'curve-panel.js']) {
+for (const file of ['script.js', 'dynamics.js', 'settings.js', 'curve-panel.js', 'motion.js', 'gesture.js', 'particles.js']) {
   new vm.Script(fs.readFileSync(path.join(root, file), 'utf8'), { filename: file });
 }
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
@@ -16,3 +16,5 @@ const config = JSON.parse(fs.readFileSync(path.join(root, 'devservers.json'), 'u
 assert.equal(config.servers[0].port, 18240);
 console.log('PASS: JavaScript syntax, local references, unique IDs and server configuration');
 require('./dynamics.test.cjs');
+require('./motion.test.cjs');
+require('./gesture.test.cjs');
