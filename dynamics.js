@@ -2,12 +2,6 @@
 (function (root) {
   const clamp = (v, low, high) => Math.min(high, Math.max(low, v));
   const mix = (a, b, t) => a + (b - a) * t;
-  // Start at the top midpoint. Top=0%, bottom=50%, independent of radius.
-  function rimPath(radius, gap = 0) {
-    const low = -gap, high = 180 + gap, r = radius + gap;
-    return `M90 ${low} H${high-r} A${r} ${r} 0 0 1 ${high} ${low+r} V${high-r} A${r} ${r} 0 0 1 ${high-r} ${high} H${low+r} A${r} ${r} 0 0 1 ${low} ${high-r} V${low+r} A${r} ${r} 0 0 1 ${low+r} ${low} H90 Z`;
-  }
-  const rimOffset = (center, length) => length / 2 - center;
   function glyph(day) {
     const points = [];
     for (let y = -11; y <= 11; y++) {
@@ -39,7 +33,7 @@
     }
     return output;
   }
-  const api = { clamp, mix, rimPath, rimOffset, glyph, random, sanitize };
+  const api = { clamp, mix, glyph, random, sanitize };
   if (typeof module !== 'undefined') module.exports = api;
   else root.ToggleMath = api;
 })(globalThis);

@@ -3,18 +3,12 @@
   "inputMode": "local_video",
   "implementationMode": "evidence_reimplementation",
   "source": "User-provided MP4; 2878x2160, 60fps, 14.4s",
-  "pages": ["index.html"],
+  "pages": ["index.html", "comparison.html"],
   "requiredStates": ["night", "day", "pressed", "dragging", "settling", "overdrag-left", "overdrag-right", "cancelled", "interrupted", "keyboard-focus", "reduced-motion", "panel-open", "panel-hidden", "timeline-paused", "timeline-resumed"],
   "journeys": ["toggle both directions", "drag and hold midpoint", "overdrag and release", "reverse during motion", "cancel pointer", "change parameters", "persist across reload", "export JSON", "reset defaults", "compare five recorded curves", "scrub time", "replay recorded gesture", "verify centered highlights at parameter extremes"],
   "excluded": ["publication", "source-code recovery", "pixel-exact equivalence"],
-  "viewports": [
-    { "width": 1440, "height": 1000, "dpr": 1 },
-    { "width": 1024, "height": 768, "dpr": 1 },
-    { "width": 390, "height": 844, "dpr": 2 },
-    { "width": 760, "height": 900, "dpr": 1 },
-    { "width": 761, "height": 900, "dpr": 1 },
-    { "width": 1440, "height": 480, "dpr": 1 }
-  ],
+  "viewports": [{ "width": 1455, "height": 966, "dpr": 1.5 }],
+  "currentValidationScope": "Desktop only; user explicitly waived narrow-screen testing",
   "motionPreferences": ["no-preference", "reduce"],
   "dynamicComparison": { "randomness": "local seeded PRNG; original unknown", "frameEquivalence": "unverified" },
   "runtime": "static HTTP; devservers.json; no packages"

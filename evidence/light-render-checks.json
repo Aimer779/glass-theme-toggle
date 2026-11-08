@@ -1,0 +1,71 @@
+{
+  "source": [
+    242,
+    251,
+    255,
+    247
+  ],
+  "isolated": [
+    242,
+    251,
+    255,
+    247
+  ],
+  "off": true,
+  "renderMedianMs": 10.399999976158142,
+  "renderP95Ms": 12.300000011920929,
+  "parameters": {
+    "width": 420,
+    "radius": 43,
+    "glass": 0.15,
+    "blur": 12,
+    "stiffness": 220,
+    "damping": 20,
+    "elasticity": 0.25,
+    "deformation": 1,
+    "rimLag": 230,
+    "spread": 27,
+    "size": 2.6,
+    "twinkle": 0.25,
+    "glow": 1,
+    "arc": 34,
+    "nightArc": 28,
+    "lineWidth": 2.6,
+    "gap": 4.5,
+    "bloom": 7,
+    "nightColor": "#6980ff",
+    "dayColor": "#ffc34d",
+    "edgeLight": 1.2,
+    "innerGlow": 0.85,
+    "scatter": 82
+  },
+  "count": 23,
+  "leftSide": {
+    "state": "dragging",
+    "animating": "true",
+    "paused": "false",
+    "progress": "0.50000",
+    "x": "0.499999",
+    "sx": "0.981872",
+    "sy": "0.949041",
+    "phase": "-24.071215",
+    "travel": "202.85999999999999",
+    "pointerFocus": "true"
+  },
+  "leftOverdrag": {
+    "state": "dragging",
+    "animating": "true",
+    "paused": "false",
+    "progress": "0.00000",
+    "x": "-0.102614",
+    "sx": "1.005728",
+    "sy": "0.938422",
+    "phase": "-38.963617",
+    "travel": "202.85999999999999",
+    "pointerFocus": "true"
+  },
+  "release": true,
+  "scrub": true,
+  "resume": true,
+  "reducedMotion": true
+}

@@ -4,6 +4,7 @@
     { group: '形状与材质', key: 'radius', label: '滑块圆角', min: 20, max: 65, step: 1, unit: '', value: 43 },
     { group: '形状与材质', key: 'glass', label: '玻璃不透明度', min: .03, max: .4, step: .01, unit: '', value: .15 },
     { group: '形状与材质', key: 'blur', label: '玻璃模糊', min: 0, max: 30, step: 1, unit: ' px', value: 12 },
+    { group: '形状与材质', key: 'bevel', label: '玻璃倒角宽度', min: .5, max: 5, step: .1, unit: '', value: 2.2 },
     { group: '弹性响应', key: 'stiffness', label: '弹簧刚度', min: 80, max: 500, step: 10, unit: '', value: 220 },
     { group: '弹性响应', key: 'damping', label: '回弹阻尼', min: 8, max: 45, step: 1, unit: '', value: 20 },
     { group: '弹性响应', key: 'elasticity', label: '边界弹性', min: .05, max: .6, step: .05, unit: '', value: .25 },
@@ -12,14 +13,17 @@
     { group: '运动与粒子', key: 'spread', label: '粒子散开幅度', min: 0, max: 80, step: 1, unit: '', value: 27 },
     { group: '运动与粒子', key: 'size', label: '像素大小', min: 1, max: 3.3, step: .1, unit: '', value: 2.6 },
     { group: '运动与粒子', key: 'twinkle', label: '粒子闪烁', min: 0, max: 1, step: .05, unit: '', value: .25 },
-    { group: '轮廓高光', key: 'glow', label: '发光强度', min: 0, max: 2, step: .05, unit: '', value: 1 },
-    { group: '轮廓高光', key: 'arc', label: '亮边长度', min: 10, max: 65, step: 1, unit: ' %', value: 34 },
-    { group: '轮廓高光', key: 'lineWidth', label: '亮芯线宽', min: .5, max: 4, step: .1, unit: '', value: 1.8 },
-    { group: '轮廓高光', key: 'gap', label: '外侧亮线间距', min: 2, max: 10, step: .5, unit: '', value: 5 },
-    { group: '轮廓高光', key: 'bloom', label: '光晕范围', min: 2, max: 16, step: .5, unit: '', value: 7 },
-    { group: '轮廓高光', key: 'innerGlow', label: '内部受光强度', min: 0, max: 1.5, step: .05, unit: '', value: .85 },
-    { group: '轮廓高光', key: 'nightColor', label: '夜间光色', type: 'color', value: '#8e87ff' },
-    { group: '轮廓高光', key: 'dayColor', label: '日间光色', type: 'color', value: '#ffc34d' },
+    { group: '外部光源', key: 'glow', label: '光源亮度', min: 0, max: 2, step: .05, unit: '', value: 1 },
+    { group: '外部光源', key: 'arc', label: '日间光源弧长', min: 10, max: 65, step: 1, unit: ' %', value: 34 },
+    { group: '外部光源', key: 'nightArc', label: '夜间光源弧长', min: 10, max: 65, step: 1, unit: ' %', value: 29 },
+    { group: '外部光源', key: 'lineWidth', label: '光源线宽', min: .5, max: 4, step: .1, unit: '', value: 2.4 },
+    { group: '外部光源', key: 'gap', label: '光源与玻璃间距', min: 2, max: 10, step: .5, unit: '', value: 5.5 },
+    { group: '外部光源', key: 'bloom', label: '外部泛光范围', min: 2, max: 16, step: .5, unit: '', value: 7 },
+    { group: '外部光源', key: 'nightColor', label: '夜间光色', type: 'color', value: '#6980ff' },
+    { group: '外部光源', key: 'dayColor', label: '日间光色', type: 'color', value: '#ffc34d' },
+    { group: '玻璃受光', key: 'edgeLight', label: '边缘受光强度', min: 0, max: 2, step: .05, unit: '', value: 1.2 },
+    { group: '玻璃受光', key: 'innerGlow', label: '内部散射强度', min: 0, max: 1.5, step: .05, unit: '', value: .85 },
+    { group: '玻璃受光', key: 'scatter', label: '向内扩散距离', min: 20, max: 110, step: 1, unit: '', value: 82 },
   ];
   const defaults = Object.fromEntries(schema.map(s => [s.key, s.value]));
   const storageKey = 'glass-theme-toggle.parameters.v1';
@@ -71,7 +75,7 @@
     changed(); feedback.textContent = '已恢复默认参数';
   });
   document.querySelector('#export').addEventListener('click', () => {
-    const blob = new Blob([JSON.stringify({ version: 3, parameters: values }, null, 2)], { type: 'application/json' });
+    const blob = new Blob([JSON.stringify({ version: 4, parameters: values }, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob), a = document.createElement('a');
     a.href = url; a.download = 'glass-toggle-parameters.json'; a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000); feedback.textContent = '已导出当前参数';

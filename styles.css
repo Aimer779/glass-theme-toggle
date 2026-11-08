@@ -1,4 +1,4 @@
-:root { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; color: #dbdbde; background: #151619; font-synthesis: none; --day: 0; --accent: 148, 140, 255; --glow: 1; --glass: .15; --blur: 12px; --radius: 43px; --rim-phase: -32; }
+:root { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; color: #dbdbde; background: #151619; font-synthesis: none; --day: 0; --accent: 105, 128, 255; --glass: .15; --blur: 12px; --radius: 43px; }
 * { box-sizing: border-box; }
 body { margin: 0; }
 button, input { font: inherit; }
@@ -8,7 +8,6 @@ button:focus-visible, input:focus-visible { outline: 2px solid #928cff; outline-
 .absolute { position: absolute; }
 .decorative { pointer-events: none; }
 .overflow-clip { overflow: clip; }
-.overflow-visible { overflow: visible; }
 .overflow-y-auto { overflow-y: auto; }
 .z-2 { z-index: 2; }
 [hidden] { display: none !important; }
@@ -28,15 +27,10 @@ button:focus-visible, input:focus-visible { outline: 2px solid #928cff; outline-
 .theme-switch[data-pointer-focus]:focus-visible { outline: none; }
 .track { inset: 0; border-radius: var(--track-radius, 52px); background: linear-gradient(150deg, rgba(0,0,0,var(--track-shade,.5)), rgba(0,0,0,0)), rgb(calc(9 + var(--surface,0)*211), calc(10 + var(--surface,0)*209), calc(12 + var(--surface,0)*201)); box-shadow: inset 0 4px 7px rgba(0,0,0,calc(.8 - var(--day)*.54)), inset 0 -1px 2px rgba(255,255,255,calc(.06 + var(--day)*.15)), 0 12px 22px rgba(0,0,0,calc(.35 - var(--day)*.16)), 0 1px 2px rgba(0,0,0,.18); }
 .thumb { top: 5.85%; left: 3.1%; width: 45.5%; height: 88.3%; border-radius: var(--radius); transform-origin: center; will-change: transform; }
-.glass { inset: 0; border-radius: inherit; background: linear-gradient(145deg, rgba(255,255,255,calc(var(--glass) + .08)), rgba(255,255,255,.025) 44%, rgba(255,255,255,calc(var(--surface,0)*.12))), rgba(220,219,215,calc(var(--glass)*.35 + var(--surface,0)*.32)); backdrop-filter: blur(var(--blur)); box-shadow: inset 0 1.5px 1.5px rgba(255,255,255,calc(.42 + var(--day)*.3)), inset 1px 0 2px rgba(255,255,255,.2), inset -1px -1px 1.5px rgba(255,255,255,.18), 0 6px 12px rgba(0,0,0,calc(.33 - var(--day)*.13)); }
-.inner-light { inset: 0; border-radius: inherit; background: radial-gradient(ellipse at var(--light-x, 50%) var(--light-y, 100%), rgba(var(--accent),calc(var(--inner-glow, .85)*var(--glow))), transparent 76%); opacity: calc(1 - var(--day)*.12); }
+.glass { inset: 0; border-radius: inherit; background: linear-gradient(150deg, rgba(255,255,255,.025), transparent 48%, rgba(255,255,255,calc(var(--surface,0)*.1))), rgba(calc(75 + var(--surface,0)*145),calc(79 + var(--surface,0)*140),calc(91 + var(--surface,0)*124),calc(.2 + var(--glass)*1.5 - var(--surface,0)*.18)); backdrop-filter: blur(var(--blur)); box-shadow: inset 0 1px 1px rgba(255,255,255,calc(.25 + var(--day)*.25)), inset 0 var(--bevel,2.2px) calc(var(--bevel,2.2px)*2.5) rgba(255,255,255,.075), inset 1px 0 var(--bevel,2.2px) rgba(255,255,255,.13), inset -1px -1px var(--bevel,2.2px) rgba(255,255,255,.12), 0 6px 12px rgba(0,0,0,calc(.33 - var(--day)*.13)); }
+.glass-reflection { inset: 0; border-radius: inherit; background: radial-gradient(ellipse at 40% -25%, rgba(255,255,255,.055), transparent 65%), linear-gradient(120deg,rgba(255,255,255,.018),transparent 42%,rgba(0,0,0,.025)); }
+.lighting { transform-origin: center; }
 .particles { inset: 0; width: 100%; height: 100%; clip-path: inset(0 round var(--radius)); }
-.rim { inset: 0; width: 100%; height: 100%; opacity: min(1, var(--glow)); filter: brightness(calc(.8 + var(--glow)*.2 + var(--transition-glow,0)*.07)); }
-.rim-path { stroke-dasharray: 34 66; stroke-dashoffset: var(--rim-phase); stroke-linecap: round; }
-.rim-halo { stroke: rgb(var(--accent)); stroke-width: calc(17 + var(--transition-glow,0)*3); }
-.rim-soft { stroke: rgb(var(--accent)); stroke-width: calc(7 + var(--transition-glow,0)*2); }
-.rim-core, .rim-echo { stroke: rgb(calc(241 + var(--day)*14),calc(240 + var(--day)*10),calc(255 - var(--day)*83)); stroke-width: var(--line-width, 1.8); }
-.rim-echo { stroke-width: calc(var(--line-width, 1.8)*.7); opacity: .9; }
 .panel { padding: 30px 25px 20px; background: #1c1d21; border-left: 1px solid #303137; color: #d5d5dc; height: 100svh; scrollbar-width: thin; scrollbar-color: #474850 transparent; }
 .panel-header h1 { margin: 0; font-size: 15px; font-weight: 550; }
 .panel-header p, .feedback { color: #96969f; font-size: 11px; line-height: 1.7; }

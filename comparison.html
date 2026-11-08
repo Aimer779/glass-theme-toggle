@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>玻璃开关 · 图片对比</title>
+  <link rel="stylesheet" href="comparison.css"><script src="comparison.js" defer></script>
+</head>
+<body>
+  <header><h1>原视频 / 当前实现</h1><a href="index.html">打开交互预览</a></header>
+  <div class="tools">
+    <label>取景 <select id="view"><option value="whole">整块玻璃</option><option value="detail" selected>底部受光近景</option></select></label>
+    <label>放大 <select id="zoom"><option value="1">1×</option><option value="1.5">1.5×</option><option value="2" selected>2×</option></select></label>
+    <button id="original" type="button">仅原版</button><button id="split" type="button">各一半</button><button id="current" type="button">仅实现</button>
+    <label>分界 <input id="reveal" type="range" min="0" max="100" value="50" aria-label="原版图片显示比例"><output id="percent">50%</output></label>
+  </div>
+  <p>拖动图片中的分界线。左侧为原版，右侧为实现。两图按玻璃宽度对齐。</p>
+  <div class="viewport">
+    <div class="comparison relative" id="comparison">
+      <img class="layer absolute" id="local" src="evidence/light-local-detail.png" alt="本地实现的夜间玻璃开关">
+      <img class="layer absolute" id="reference" src="evidence/light-reference-detail.png" alt="原视频的夜间玻璃开关">
+      <span class="divider absolute" aria-hidden="true"><span>↔</span></span>
+      <span class="tag original absolute">原版</span><span class="tag current absolute">实现</span>
+    </div>
+  </div>
+  <footer>
+    <p>截图版本：2026-11-08 · 外部光源与玻璃材质迭代。</p>
+    <p>这是静态截图对比。调参后需重新截取实现图片。</p>
+    <p>仍需关注：圆角内的局部聚光、玻璃厚度感及像素图案比例。</p>
+  </footer>
+</body>
+</html>

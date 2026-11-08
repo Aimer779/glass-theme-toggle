@@ -1,0 +1,35 @@
+{
+  "middle": {
+    "state": "dragging",
+    "animating": "true",
+    "paused": "false",
+    "progress": "0.50024",
+    "x": "0.500240",
+    "sx": "0.968860",
+    "sy": "0.952751",
+    "phase": "31.218015",
+    "travel": "202.85999999999999",
+    "pointerFocus": "true"
+  },
+  "overdrag": {
+    "state": "dragging",
+    "animating": "true",
+    "paused": "false",
+    "progress": "1.00000",
+    "x": "1.090716",
+    "sx": "1.090791",
+    "sy": "0.901024",
+    "phase": "20.763508",
+    "travel": "202.85999999999999",
+    "pointerFocus": "true"
+  },
+  "release": true,
+  "glass": {
+    "backgroundColor": "rgba(220, 219, 215, 0.243)",
+    "backgroundImage": "linear-gradient(150deg, rgba(255, 255, 255, 0.024), rgba(0, 0, 0, 0) 48%, rgba(255, 255, 255, 0.1)), none",
+    "boxShadow": "rgba(255, 255, 255, 0.5) 0px 1px 1px 0px inset, rgba(255, 255, 255, 0.075) 0px 2.33444px 5.83611px 0px inset, rgba(255, 255, 255, 0.13) 1px 0px 2.33444px 0px inset, rgba(255, 255, 255, 0.12) -1px -1px 2.33444px 0px inset, rgba(0, 0, 0, 0.2) 0px 6px 12px 0px",
+    "backdropFilter": "blur(12px)",
+    "borderRadius": "45.6278px",
+    "boxSizing": "border-box"
+  }
+}

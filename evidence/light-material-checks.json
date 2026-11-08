@@ -1,0 +1,49 @@
+{
+  "parameters": {
+    "width": 420,
+    "radius": 43,
+    "glass": 0.15,
+    "blur": 12,
+    "bevel": 2.2,
+    "stiffness": 220,
+    "damping": 20,
+    "elasticity": 0.25,
+    "deformation": 1,
+    "rimLag": 230,
+    "spread": 27,
+    "size": 2.6,
+    "twinkle": 0.25,
+    "glow": 1,
+    "arc": 34,
+    "nightArc": 29,
+    "lineWidth": 2.4,
+    "gap": 5.5,
+    "bloom": 7,
+    "nightColor": "#6980ff",
+    "dayColor": "#ffc34d",
+    "edgeLight": 1.2,
+    "innerGlow": 0.85,
+    "scatter": 82
+  },
+  "controls": 24,
+  "glass": "",
+  "viewport": [
+    1455,
+    966,
+    1.5
+  ],
+  "lightOff": true,
+  "middle": {
+    "state": "dragging",
+    "animating": "true",
+    "paused": "false",
+    "progress": "0.50000",
+    "x": "0.500000",
+    "sx": "0.979786",
+    "sy": "0.950112",
+    "phase": "-24.855171",
+    "travel": "202.85999999999999",
+    "pointerFocus": "true"
+  },
+  "exceptions": []
+}

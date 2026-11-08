@@ -1,7 +1,25 @@
 {
-  "version": 3,
+  "version": 4,
   "runtimeExternalRequests": [],
   "files": [
+    {
+      "path": "comparison.css",
+      "source": "Independent local implementation; no external dependencies",
+      "bytes": 1708,
+      "sha256": "cdd983f8265ec61f00115c3236270cbc39ad2aa053f90baa878d14452a339bf4"
+    },
+    {
+      "path": "comparison.html",
+      "source": "Independent local implementation; no external dependencies",
+      "bytes": 1979,
+      "sha256": "9fa553110e880f2dcff4d7a153162de1fc3b01e3ff4a6121957618153921f4ee"
+    },
+    {
+      "path": "comparison.js",
+      "source": "Independent local implementation; no external dependencies",
+      "bytes": 2187,
+      "sha256": "7d539a6db6935d497d4649d02f7dafea738d8754c40319b913fcc3f90d14797f"
+    },
     {
       "path": "curve-panel.js",
       "bytes": 3698,
@@ -10,9 +28,33 @@
     },
     {
       "path": "dynamics.js",
-      "bytes": 2237,
-      "sha256": "bf68ba1055670489618967869fc6e14d71e01f93001347a2e66f5c1c9adc067c",
+      "bytes": 1772,
+      "sha256": "86d93a08c88d4faa8df4db06195eb19ce21f19d535289f6104f831425bb44a31",
       "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "evidence/light-local-aligned.png",
+      "source": "Screenshot of this local implementation; normalized glass width",
+      "bytes": 132583,
+      "sha256": "bd1cda07ac3fca3fb380e4986b0609ca2bdeebbe55666ce82f925df9b23d8898"
+    },
+    {
+      "path": "evidence/light-local-detail.png",
+      "source": "Screenshot of this local implementation; normalized glass width",
+      "bytes": 74202,
+      "sha256": "362ce7f06a82195324be2b79719695ab59a76c04e5a171ad6930740dc78937b9"
+    },
+    {
+      "path": "evidence/light-reference-aligned.png",
+      "source": "User-provided reference; cropped for local comparison only",
+      "bytes": 148763,
+      "sha256": "54a494a38156b6f723d29cb53464360e5c4ed3ce14da340f59ae4070781aaa18"
+    },
+    {
+      "path": "evidence/light-reference-detail.png",
+      "source": "User-provided reference; cropped for local comparison only",
+      "bytes": 85486,
+      "sha256": "edbc011024090624ff7fdf8c77704d2119153d16c520ac43cb4e2c46a6b97390"
     },
     {
       "path": "evidence/reference-curve.png",
@@ -31,6 +73,12 @@
       "bytes": 20398,
       "sha256": "7abb37a56ab30271e32eba432e65a16d84a73ba09437d7dd064fdc80e5f58d58",
       "source": "User-provided local reference; not used as runtime artwork"
+    },
+    {
+      "path": "evidence/reference-light.png",
+      "source": "User-provided reference; cropped for local comparison only",
+      "bytes": 158130,
+      "sha256": "ff1b152f215e55528a8d7822d4bd42ff6054b62029f281b9fd0d8199b2e16d63"
     },
     {
       "path": "evidence/reference-mid-drag-sequence.jpg",
@@ -88,9 +136,15 @@
     },
     {
       "path": "index.html",
-      "bytes": 4844,
-      "sha256": "cf7f49d3a11e10e48774915e3332ef6eaa07f7c78b08f60b3c64070fafbd5b67",
+      "bytes": 4296,
+      "sha256": "e033d42fe6f1f35d6267f60d958437e88fd5b1cf02be9e3c2f4d5fc54405bc42",
       "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "lighting.js",
+      "source": "Independent local implementation; no external dependencies",
+      "bytes": 8912,
+      "sha256": "f3cad3d0ff44224950f8f77c856ce7d289a8d51360e624c7e7debbb39de569bd"
     },
     {
       "path": "motion.js",
@@ -106,20 +160,20 @@
     },
     {
       "path": "script.js",
-      "bytes": 7350,
-      "sha256": "5949e33385bf13322f09df024ef742456cdfe147408e160f637c71ef9ec914e0",
+      "bytes": 6559,
+      "sha256": "41c4c83d99b54c3d6ab0892dc0c877d52161f6c72ed068a6821033f3d8d4f41a",
       "source": "Independent local implementation; no external dependencies"
     },
     {
       "path": "settings.js",
-      "bytes": 5674,
-      "sha256": "ce98726fe04dc0fc1214b7c1c064efb3535feed1021774598cd250a1e942f3c7",
+      "bytes": 6196,
+      "sha256": "520c0b91c599d46c0d7ee2c44a1fcf2f4b82316b6e5a382b6721661192d5d7c7",
       "source": "Independent local implementation; no external dependencies"
     },
     {
       "path": "styles.css",
-      "bytes": 7807,
-      "sha256": "f1f6372095725c7e2133cd12f6a639da21bfd415451f2b3d8d518137b31e48f8",
+      "bytes": 7250,
+      "sha256": "ea5527158530123cad000bd6dbc60a659242c10b34ba607cc1b5b8544fcec889",
       "source": "Independent local implementation; no external dependencies"
     }
   ]

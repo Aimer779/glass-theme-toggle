@@ -1,13 +1,13 @@
 (() => {
   'use strict';
-  const { clamp, mix, rimPath, rimOffset } = ToggleMath;
+  const { clamp, mix } = ToggleMath;
   const stage = document.querySelector('.stage'), button = document.querySelector('#theme-switch');
   const thumb = document.querySelector('.thumb'), canvas = document.querySelector('.particles');
-  const rimPaths = [...document.querySelectorAll('.rim-path')], core = document.querySelector('.rim-core');
+  const lighting = ToggleLighting.create(document.querySelector('.lighting'));
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let settings = ToggleSettings.values;
   const engine = ToggleMotion.createMotion(settings), particles = createParticles(canvas);
-  let frameId = 0, lastTime = 0, pathLength = 1, origin = performance.now();
+  let frameId = 0, lastTime = 0, origin = performance.now();
   let frames = [{...engine.snapshot(),time:0,clock:origin}], selected = 0, playback = null;
   const chart = createCurvePanel({ seek,replay,resume });
   function rgb(hex) { return hex.match(/[a-f\d]{2}/gi).map(v => parseInt(v,16)); }
@@ -54,21 +54,17 @@
     // Transform deformation must not alter the canvas backing-buffer scale.
     const size = thumb.clientWidth;
     particles.resize(size,devicePixelRatio||1);
+    lighting.resize(size,devicePixelRatio||1);
     stage.style.setProperty('--radius',settings.radius*size/180+'px');
+    stage.style.setProperty('--bevel',settings.bevel*size/180+'px');
     stage.style.setProperty('--track-radius',(settings.radius+9)*size/180+'px');
-    rimPaths.forEach((path,i) => path.setAttribute('d',rimPath(settings.radius,i===3?settings.gap:0)));
-    pathLength = core.getTotalLength(); wake();
+    wake();
   }
   function applySettings() {
     settings = ToggleSettings.values; engine.configure(settings);
     stage.style.setProperty('--width',settings.width+'px');
     stage.style.setProperty('--glass',settings.glass);
     stage.style.setProperty('--blur',settings.blur+'px');
-    stage.style.setProperty('--glow',settings.glow);
-    stage.style.setProperty('--inner-glow',settings.innerGlow);
-    stage.style.setProperty('--line-width',settings.lineWidth);
-    document.querySelector('#bloom feGaussianBlur').setAttribute('stdDeviation',settings.bloom);
-    rimPaths.forEach(path => path.style.strokeDasharray=`${settings.arc} ${100-settings.arc}`);
     resize();
   }
   function paint(now) {
@@ -79,18 +75,13 @@
     stage.style.setProperty('--day',tone);
     stage.style.setProperty('--surface',surface);
     stage.style.setProperty('--track-shade',.5*(1-surface)**2);
-    stage.style.setProperty('--transition-glow',4*p*(1-p));
     stage.style.color = tone<.25?'#9899a1':tone<.49?'#ffffff':tone<.75?'#000000':'#686868';
     const white=[255,231,190];
     let warmth=clamp(p<.5?(p-.3)/.2:(p-.5)/.5,0,1);
     warmth=warmth*warmth*(3-2*warmth);
     const accent=p<.5?night.map((v,i)=>mix(v,white[i],warmth)):white.map((v,i)=>mix(v,light[i],warmth));
     stage.style.setProperty('--accent',accent.map(Math.round).join(','));
-    stage.style.setProperty('--rim-phase',rimOffset(f.phase,settings.arc));
-    const center = ((f.phase%100)+100)%100;
-    const point = core.getPointAtLength(center/100*pathLength);
-    stage.style.setProperty('--light-x',point.x/180*100+'%');
-    stage.style.setProperty('--light-y',point.y/180*100+'%');
+    lighting.draw(f,settings,accent,p);
     const travel = button.clientWidth*.483;
     thumb.style.transform = `translate(${f.x*travel}px,${f.y*travel}px) scale(${f.sx},${f.sy})`;
     const clock = mode==='paused'||mode==='replay'?frames[selected].clock:now;

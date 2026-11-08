@@ -10,6 +10,7 @@
   <script src="motion.js" defer></script>
   <script src="gesture.js" defer></script>
   <script src="particles.js" defer></script>
+  <script src="lighting.js" defer></script>
   <script src="settings.js" defer></script>
   <script src="curve-panel.js" defer></script>
   <script src="script.js" defer></script>
@@ -24,15 +25,9 @@
           <span class="track absolute decorative" aria-hidden="true"></span>
           <span class="thumb absolute decorative" aria-hidden="true">
             <span class="glass absolute"></span>
-            <span class="inner-light absolute"></span>
+            <span class="glass-reflection absolute"></span>
+            <canvas class="lighting absolute" aria-hidden="true"></canvas>
             <canvas class="particles absolute" aria-hidden="true"></canvas>
-            <svg class="rim absolute overflow-visible" viewBox="0 0 180 180" fill="none" aria-hidden="true">
-              <defs><filter id="bloom" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="7"/></filter><filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2"/></filter></defs>
-              <path class="rim-path rim-halo" pathLength="100" filter="url(#bloom)"/>
-              <path class="rim-path rim-soft" pathLength="100" filter="url(#soft)"/>
-              <path class="rim-path rim-core" pathLength="100"/>
-              <path class="rim-path rim-echo" pathLength="100"/>
-            </svg>
           </span>
         </button>
       </div>

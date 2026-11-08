@@ -1,0 +1,24 @@
+{
+  "value": "75",
+  "clip": "inset(0px 25% 0px 0px)",
+  "images": [
+    {
+      "src": "evidence/light-local-detail.png",
+      "loaded": true
+    },
+    {
+      "src": "evidence/light-reference-detail.png",
+      "loaded": true
+    }
+  ],
+  "size": {
+    "x": 397.66668701171875,
+    "y": 174.52084350585938,
+    "width": 660,
+    "height": 304.5,
+    "top": 174.52084350585938,
+    "right": 1057.6666870117188,
+    "bottom": 479.0208435058594,
+    "left": 397.66668701171875
+  }
+}
