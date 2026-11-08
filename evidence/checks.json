@@ -1,0 +1,125 @@
+[
+  "parameter persistence after reload",
+  "reset defaults",
+  "downloaded JSON contains 13 current parameters",
+  "panel hide and restore",
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "width": 390,
+    "client": 375,
+    "scroll": 375,
+    "button": {
+      "x": 35,
+      "y": 198.125,
+      "width": 304.66668701171875,
+      "height": 152.33334350585938,
+      "top": 198.125,
+      "right": 339.66668701171875,
+      "bottom": 350.4583435058594,
+      "left": 35
+    },
+    "dpr": 1.999222787134509,
+    "inputs": 13,
+    "errors": []
+  },
+  {
+    "viewport": [
+      760,
+      900
+    ],
+    "width": 760,
+    "client": 745,
+    "scroll": 745,
+    "button": {
+      "x": 162.33334350585938,
+      "y": 187.5,
+      "width": 420,
+      "height": 210,
+      "top": 187.5,
+      "right": 582.3333435058594,
+      "bottom": 397.5,
+      "left": 162.33334350585938
+    },
+    "dpr": 1.0011273681605568,
+    "inputs": 13,
+    "errors": []
+  },
+  {
+    "viewport": [
+      761,
+      900
+    ],
+    "width": 761,
+    "client": 761,
+    "scroll": 761,
+    "button": {
+      "x": 35,
+      "y": 354.66668701171875,
+      "width": 381.3333435058594,
+      "height": 190.6666717529297,
+      "top": 354.66668701171875,
+      "right": 416.3333435058594,
+      "bottom": 545.3333587646484,
+      "left": 35
+    },
+    "dpr": 1.001303780964798,
+    "inputs": 13,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1024,
+      768
+    ],
+    "width": 1024,
+    "client": 1024,
+    "scroll": 1024,
+    "button": {
+      "x": 147,
+      "y": 279,
+      "width": 420,
+      "height": 210,
+      "top": 279,
+      "right": 567,
+      "bottom": 489,
+      "left": 147
+    },
+    "dpr": 1.0011273681605568,
+    "inputs": 13,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1440,
+      480
+    ],
+    "width": 1440,
+    "client": 1440,
+    "scroll": 1440,
+    "button": {
+      "x": 355,
+      "y": 135,
+      "width": 420,
+      "height": 210,
+      "top": 135,
+      "right": 775,
+      "bottom": 345,
+      "left": 355
+    },
+    "dpr": 1.0011273681605568,
+    "inputs": 13,
+    "errors": []
+  },
+  {
+    "reduced": {
+      "matches": true,
+      "animating": "false",
+      "checked": "false",
+      "sameCanvas": true,
+      "sameRim": true
+    }
+  }
+]

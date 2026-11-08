@@ -1,0 +1,72 @@
+{
+  "version": 2,
+  "runtimeExternalRequests": [],
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 4554,
+      "sha256": "81a2b8025b8b821bbc0356b3cfbc625daa839d638e676fd97ae03f3e1237e6fa",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 7434,
+      "sha256": "13d049936065fec1fe937773b2bd924914a5f7eaea9ab8523440575f64901e08",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "script.js",
+      "bytes": 7979,
+      "sha256": "b1988beadd5c92692d80826e039712e28b8bbeb676170f51538d87910ac7a735",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "dynamics.js",
+      "bytes": 2475,
+      "sha256": "9d1152291db759be11e623e649e18b253997e9462216b026f98ecfee3e1283a3",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "settings.js",
+      "bytes": 5321,
+      "sha256": "45d761a98151f72c68fd6d020aaa1f04c49a81423368bd8eb88035795fa9d04b",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "curve-panel.js",
+      "bytes": 2358,
+      "sha256": "e84aa6a430b3b9947c8fa98fbc3557bba14d999758f85dc1d938f687a094b2bb",
+      "source": "Independent local implementation; no external dependencies"
+    },
+    {
+      "path": "evidence/reference-motion.jpg",
+      "bytes": 81575,
+      "sha256": "2f3a0de5b926ea193acacbdfc94408d1bba359af29ee709425cb6994e205baaf",
+      "source": "User-provided local reference; not used as runtime artwork"
+    },
+    {
+      "path": "evidence/reference-detail.jpg",
+      "bytes": 20398,
+      "sha256": "7abb37a56ab30271e32eba432e65a16d84a73ba09437d7dd064fdc80e5f58d58",
+      "source": "User-provided local reference; not used as runtime artwork"
+    },
+    {
+      "path": "evidence/reference-curve.png",
+      "bytes": 31853,
+      "sha256": "94c2f1558612090bbd4196331ad1ffd336f8ab72bf4bb412408c2925e6d4d6f5",
+      "source": "User-provided local reference; not used as runtime artwork"
+    },
+    {
+      "path": "evidence/reference-night-close.png",
+      "bytes": 175933,
+      "sha256": "53cb08d2ef51ea559a2e6982c1c6fdbdf5ca9a8a26cb942be54b8d361ba0d154",
+      "source": "User-provided local reference; not used as runtime artwork"
+    },
+    {
+      "path": "evidence/reference-day-close.png",
+      "bytes": 161997,
+      "sha256": "7ea3c6f95193f4fda89cfa196cc3615c3f639c4c3399bd11ddb54ef5336321b0",
+      "source": "User-provided local reference; not used as runtime artwork"
+    }
+  ]
+}

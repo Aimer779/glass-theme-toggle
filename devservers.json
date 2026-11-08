@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "servers": [{
+    "id": "glass-toggle",
+    "name": "Glass theme toggle",
+    "cwd": ".",
+    "command": ["python", "-X", "utf8", "-m", "http.server", "18240", "--bind", "127.0.0.1"],
+    "port": 18240,
+    "url": "http://127.0.0.1:18240"
+  }]
+}

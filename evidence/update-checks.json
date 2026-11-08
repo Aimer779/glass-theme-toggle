@@ -1,0 +1,116 @@
+[
+  {
+    "linear": {
+      "x": 105,
+      "y": 84,
+      "t": 0.5
+    },
+    "persisted": true
+  },
+  {
+    "steep": {
+      "x": 208.359,
+      "y": 21
+    }
+  },
+  "export has 17 current parameters, no obsolete idle-speed field",
+  {
+    "reduce": {
+      "active": "false",
+      "progress": "1.00000",
+      "unchanged": true
+    },
+    "staticScrubAllowed": true
+  },
+  {
+    "viewport": 390,
+    "width": 375,
+    "scroll": 375,
+    "canvasDpr": 1.999222787134509,
+    "controls": 17,
+    "errors": [],
+    "chart": {
+      "x": 26,
+      "y": 706.9583740234375,
+      "width": 322.66668701171875,
+      "height": 225.86459350585938,
+      "top": 706.9583740234375,
+      "right": 348.66668701171875,
+      "bottom": 932.8229675292969,
+      "left": 26
+    }
+  },
+  {
+    "viewport": 760,
+    "width": 745,
+    "scroll": 745,
+    "canvasDpr": 1.0011273681605568,
+    "controls": 17,
+    "errors": [],
+    "chart": {
+      "x": 26,
+      "y": 59.364585876464844,
+      "width": 692.6666870117188,
+      "height": 484.8645935058594,
+      "top": 59.364585876464844,
+      "right": 718.6666870117188,
+      "bottom": 544.2291793823242,
+      "left": 26
+    }
+  },
+  {
+    "viewport": 761,
+    "width": 761,
+    "scroll": 761,
+    "canvasDpr": 1.001303780964798,
+    "controls": 17,
+    "errors": [],
+    "chart": {
+      "x": 477,
+      "y": 161.6979217529297,
+      "width": 249.33334350585938,
+      "height": 174.53125,
+      "top": 161.6979217529297,
+      "right": 726.3333435058594,
+      "bottom": 336.2291717529297,
+      "left": 477
+    }
+  },
+  {
+    "viewport": 1024,
+    "width": 1024,
+    "scroll": 1024,
+    "canvasDpr": 1.0011273681605568,
+    "controls": 17,
+    "errors": [],
+    "chart": {
+      "x": 739.6666870117188,
+      "y": 161.6979217529297,
+      "width": 249.33334350585938,
+      "height": 174.53125,
+      "top": 161.6979217529297,
+      "right": 989.0000305175781,
+      "bottom": 336.2291717529297,
+      "left": 739.6666870117188
+    }
+  },
+  {
+    "viewport": 1440,
+    "width": 1440,
+    "scroll": 1440,
+    "canvasDpr": 1.0011273681605568,
+    "controls": 17,
+    "errors": [],
+    "chart": {
+      "x": 1155.666748046875,
+      "y": 161.6979217529297,
+      "width": 249.33334350585938,
+      "height": 174.53125,
+      "top": 161.6979217529297,
+      "right": 1405.0000915527344,
+      "bottom": 336.2291717529297,
+      "left": 1155.666748046875
+    }
+  },
+  "panel hide/show and Space/Enter passed"
+]

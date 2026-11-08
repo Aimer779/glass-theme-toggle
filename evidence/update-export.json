@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "parameters": {
+    "width": 420,
+    "radius": 43,
+    "glass": 0.15,
+    "blur": 12,
+    "duration": 680,
+    "easing": 7,
+    "spread": 27,
+    "size": 2.6,
+    "twinkle": 0.25,
+    "glow": 1,
+    "arc": 34,
+    "lineWidth": 1.8,
+    "gap": 5,
+    "bloom": 7,
+    "innerGlow": 0.85,
+    "nightColor": "#8e87ff",
+    "dayColor": "#ffc34d"
+  }
+}

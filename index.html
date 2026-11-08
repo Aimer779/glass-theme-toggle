@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>玻璃 · 昼夜开关</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="dynamics.js" defer></script>
+  <script src="settings.js" defer></script>
+  <script src="curve-panel.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="workspace" id="workspace">
+    <section class="stage relative overflow-clip" aria-label="开关预览">
+      <header class="stage-header absolute z-2"><span>玻璃 / 昼夜</span><button class="text-button" id="panel-toggle" aria-expanded="true" aria-controls="panel">隐藏参数</button></header>
+      <div class="ambient absolute decorative" aria-hidden="true"></div>
+      <div class="switch-frame relative">
+        <button id="theme-switch" class="theme-switch relative" type="button" role="switch" aria-checked="true" aria-label="夜间模式">
+          <span class="track absolute decorative" aria-hidden="true"></span>
+          <span class="thumb absolute decorative" aria-hidden="true">
+            <span class="glass absolute"></span>
+            <span class="inner-light absolute"></span>
+            <canvas class="particles absolute" aria-hidden="true"></canvas>
+            <svg class="rim absolute overflow-visible" viewBox="0 0 180 180" fill="none" aria-hidden="true">
+              <defs><filter id="bloom" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="7"/></filter><filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2"/></filter></defs>
+              <path class="rim-path rim-halo" pathLength="100" filter="url(#bloom)"/>
+              <path class="rim-path rim-soft" pathLength="100" filter="url(#soft)"/>
+              <path class="rim-path rim-core" pathLength="100"/>
+              <path class="rim-path rim-echo" pathLength="100"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <footer class="stage-footer absolute"><span id="theme-label">夜间</span><span>点击切换 · 支持空格键</span></footer>
+    </section>
+    <aside class="panel overflow-y-auto" id="panel" aria-label="效果参数">
+      <header class="panel-header"><h1>效果参数</h1><p>实时调整，自动保存在此浏览器。</p></header>
+      <section class="curve-panel" aria-label="动画曲线">
+        <div class="curve-heading"><h2>动画曲线</h2><select id="curve-channel" aria-label="曲线类型"><option value="travel">滑块位移</option><option value="morph">粒子聚合</option><option value="rim">高光进度</option></select></div>
+        <svg id="curve-chart" viewBox="0 0 260 182" role="img" aria-labelledby="curve-title curve-description">
+          <title id="curve-title">动画进度曲线</title><desc id="curve-description">横轴为时间，纵轴为完成进度。下方时间游标可定格动画。</desc>
+          <path class="chart-grid" d="M32 20H244 M32 84H244 M138 20V148"/>
+          <path class="chart-axis" d="M32 16V148H248"/>
+          <text x="9" y="24">1</text><text x="10" y="152">0</text><text x="215" y="175">时间</text>
+          <path id="curve-line" class="chart-line"/>
+          <path id="curve-guide" class="chart-guide"/>
+          <circle id="curve-dot" class="chart-dot" r="4.5"/>
+        </svg>
+        <p id="curve-formula" class="curve-formula"></p>
+        <div id="curve-tuning"></div>
+        <label class="parameter"><span>时间游标</span><output id="timeline-output" for="timeline">100%</output><input id="timeline" type="range" min="0" max="1000" step="1" value="1000"></label>
+        <div class="curve-readout"><span id="curve-direction">日间 → 夜间</span><span id="curve-value">完成 100%</span></div>
+        <div class="curve-actions"><button class="action-button" id="replay" type="button">重播</button><button class="action-button" id="resume" type="button" disabled>继续播放</button></div>
+        <p id="curve-status" class="curve-status" role="status">拖动游标可定格；点击开关可反向。</p>
+      </section>
+      <form id="parameters"></form>
+      <div class="panel-actions"><button class="action-button" id="reset" type="button">恢复默认</button><button class="action-button" id="export" type="button">导出参数</button></div>
+      <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+    </aside>
+  </main>
+</body>
+</html>
